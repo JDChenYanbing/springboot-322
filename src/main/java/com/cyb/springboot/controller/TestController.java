@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("test")
+@RequestMapping("test2")
 public class TestController {
 
     @RequestMapping("test")
