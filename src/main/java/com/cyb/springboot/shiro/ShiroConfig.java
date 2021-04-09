@@ -1,3 +1,4 @@
+/*
 package com.cyb.springboot.shiro;
 
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -13,11 +14,13 @@ import java.util.Map;
 public class ShiroConfig {
 
 
-    /**
+    */
+/**
      * shiro 的过滤器链
      *       shiro的核心总入口
      *
-     * */
+     * *//*
+
     @Bean
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
 
@@ -86,3 +89,4 @@ public class ShiroConfig {
     }
 }
 
+*/

@@ -1,3 +1,4 @@
+/*
 package com.cyb.springboot.shiro;
 
 
@@ -39,3 +40,4 @@ public class MyRealm extends AuthorizingRealm{
         return null;
     }
 }
+*/

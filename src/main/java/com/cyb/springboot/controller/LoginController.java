@@ -1,3 +1,4 @@
+/*
 package com.cyb.springboot.controller;
 
 import org.apache.shiro.authc.AuthenticationException;
@@ -11,12 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class LoginController {
 
-    /**
+    */
+/**
      * 当用户名密码不正确时
      * 跳转到此方法
      * 认证失败之后会进入此方法 提示用户失败原因
      * @return
-     */
+     *//*
+
     @RequestMapping("login")
     public String login(HttpServletRequest request, ModelMap map){
         //认证器会根据对应的错误 返回对应的异常 根据异常判断对应错误
@@ -44,3 +47,4 @@ public class LoginController {
     }
 }
 
+*/
