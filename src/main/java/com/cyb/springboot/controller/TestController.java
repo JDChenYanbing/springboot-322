@@ -80,13 +80,13 @@ public class TestController {
                 // 输出表格内容,此处可替换为数据插入操作
                 TestBean testBean = new TestBean();
                 //截取.前的内容
-                String number =  row.getCell(1).toString();
+                String number =  row.getCell(2).toString();
                 int index = number.indexOf(".");
                 Integer intNumber = Integer.valueOf(number.substring(0,index));
-                testBean.setName(row.getCell(0).toString());
+                testBean.setName(row.getCell(1).toString());
                 testBean.setAge(intNumber);
-                System.out.println(row.getCell(0));
                 System.out.println(row.getCell(1));
+                System.out.println(row.getCell(2));
                 //插入数据库
                 int count = testService.insert(testBean);
 
