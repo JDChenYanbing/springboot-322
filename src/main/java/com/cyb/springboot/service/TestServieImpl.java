@@ -68,4 +68,12 @@ public class TestServieImpl implements TestService{
 
     }
 
+    @Override
+    public int insert(TestBean testBean) {
+        String name = testBean.getName();
+        Integer age = testBean.getAge();
+
+        return testMapper.insert(name,age);
+    }
+
 }

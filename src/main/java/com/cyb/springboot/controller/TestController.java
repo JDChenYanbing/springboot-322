@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.jnlp.IntegrationService;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
@@ -71,16 +73,22 @@ public class TestController {
             // 根据页面index 获取sheet页
             Sheet sheet = wb.getSheetAt(0);
             Row row = null;
-            // 循环sheet页中数据从第x行开始,例:第3行开始为导入数据
+            // 循环sheet页中数据从第x行开始,例:第1行开始为导入数据
             for (int i = 1; i < sheet.getPhysicalNumberOfRows(); i++) {
                 // 获取每一行数据
                 row = sheet.getRow(i);
                 // 输出表格内容,此处可替换为数据插入操作
                 TestBean testBean = new TestBean();
+                //截取.前的内容
+                String number =  row.getCell(1).toString();
+                int index = number.indexOf(".");
+                Integer intNumber = Integer.valueOf(number.substring(0,index));
                 testBean.setName(row.getCell(0).toString());
+                testBean.setAge(intNumber);
                 System.out.println(row.getCell(0));
+                System.out.println(row.getCell(1));
                 //插入数据库
-                //testService.insert(testBean);
+                int count = testService.insert(testBean);
 
                 // 日期,表格数字格式为日期
                 /*if (null != row.getCell(0) && "" != row.getCell(0).toString()) {

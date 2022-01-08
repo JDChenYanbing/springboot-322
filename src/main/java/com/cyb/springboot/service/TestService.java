@@ -15,4 +15,5 @@ public interface TestService {
     void excel(HttpServletResponse response) throws IOException;
 
 
+    int insert(TestBean testBean);
 }
